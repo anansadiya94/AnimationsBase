@@ -1,0 +1,11 @@
+framework module ImageTransition {
+  umbrella header "ImageTransition.h"
+
+  export *
+  module * { export * }
+}
+
+module ImageTransition.Swift {
+    header "ImageTransition-Swift.h"
+    requires objc
+}

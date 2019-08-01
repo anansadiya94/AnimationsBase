@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bE4-FA-CzZ">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Download View Controller-->
+        <scene sceneID="Ain-nm-5Zp">
+            <objects>
+                <viewController id="bE4-FA-CzZ" customClass="DownloadViewController" customModule="AnimationBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hvj-mH-v4W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pp-z3-4c4">
+                                <rect key="frame" x="30" y="94" width="172" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The data is ready. Tap the button for download it!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVF-BE-iI0">
+                                <rect key="frame" x="30" y="136" width="335" height="38"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y73-hT-5bA">
+                                <rect key="frame" x="133" y="194" width="109" height="30"/>
+                                <state key="normal" title="Start download!"/>
+                                <connections>
+                                    <action selector="downloadButtonTapped:" destination="bE4-FA-CzZ" eventType="touchUpInside" id="jc9-JB-PDb"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRf-vh-OvT" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="137.66666666666666" y="274" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="SND-lD-E4F"/>
+                                    <constraint firstAttribute="width" constant="100" id="hrD-Kd-7zf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYF-w6-8w9" customClass="AnimatedButton" customModule="Lottie">
+                                <rect key="frame" x="87.666666666666686" y="658" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Qly-Ei-6EM"/>
+                                    <constraint firstAttribute="width" constant="200" id="Xyg-P5-a1M"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="animatedButtonTapped:" destination="bE4-FA-CzZ" eventType="touchUpInside" id="otU-hm-jdI"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOWNLOAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKy-UJ-4tQ">
+                                <rect key="frame" x="138.66666666666666" y="698" width="98" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Lx4-Kk-RbO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.35686274509803922" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QVF-BE-iI0" firstAttribute="leading" secondItem="8pp-z3-4c4" secondAttribute="leading" id="6Aa-Jt-edP"/>
+                            <constraint firstItem="hYF-w6-8w9" firstAttribute="centerX" secondItem="Hvj-mH-v4W" secondAttribute="centerX" id="N09-0l-qPV"/>
+                            <constraint firstItem="QVF-BE-iI0" firstAttribute="top" secondItem="8pp-z3-4c4" secondAttribute="bottom" constant="10" id="SpD-b7-Yhb"/>
+                            <constraint firstItem="8pp-z3-4c4" firstAttribute="top" secondItem="tge-b8-IYU" secondAttribute="top" constant="50" id="XEG-IA-PVN"/>
+                            <constraint firstItem="tge-b8-IYU" firstAttribute="bottom" secondItem="uKy-UJ-4tQ" secondAttribute="bottom" constant="59" id="Yb4-Lf-T4e"/>
+                            <constraint firstItem="uKy-UJ-4tQ" firstAttribute="centerX" secondItem="Hvj-mH-v4W" secondAttribute="centerX" id="azp-yA-i0a"/>
+                            <constraint firstItem="GRf-vh-OvT" firstAttribute="centerX" secondItem="Hvj-mH-v4W" secondAttribute="centerX" id="fa2-dS-Usi"/>
+                            <constraint firstItem="GRf-vh-OvT" firstAttribute="top" secondItem="y73-hT-5bA" secondAttribute="bottom" constant="50" id="gEB-rK-j94"/>
+                            <constraint firstItem="8pp-z3-4c4" firstAttribute="leading" secondItem="tge-b8-IYU" secondAttribute="leading" constant="30" id="jug-3U-LgU"/>
+                            <constraint firstItem="y73-hT-5bA" firstAttribute="centerX" secondItem="Hvj-mH-v4W" secondAttribute="centerX" id="kUI-X5-8bv"/>
+                            <constraint firstItem="tge-b8-IYU" firstAttribute="trailing" secondItem="QVF-BE-iI0" secondAttribute="trailing" constant="10" id="kWb-eC-lCE"/>
+                            <constraint firstItem="tge-b8-IYU" firstAttribute="bottom" secondItem="hYF-w6-8w9" secondAttribute="bottom" constant="20" id="xRU-fJ-3og"/>
+                            <constraint firstItem="y73-hT-5bA" firstAttribute="top" secondItem="QVF-BE-iI0" secondAttribute="bottom" constant="20" id="z6t-uF-2hg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tge-b8-IYU"/>
+                    </view>
+                    <connections>
+                        <outlet property="animatedButton" destination="hYF-w6-8w9" id="m0L-Iy-FQF"/>
+                        <outlet property="animationView" destination="GRf-vh-OvT" id="TR6-IT-8F3"/>
+                        <outlet property="submitLabel" destination="uKy-UJ-4tQ" id="JEq-ti-Qda"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5a-V4-i79" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

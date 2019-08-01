@@ -1,0 +1,10 @@
+{
+  "commitish" : "0.4.0",
+  "iOS" : [
+    {
+      "name" : "ImageTransition",
+      "hash" : "bb10194b2826d863bab9ccb9592151690c6780f00f180ea84525b2f7249eec85",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.38.29 clang-1100.0.20.14)"
+    }
+  ]
+}

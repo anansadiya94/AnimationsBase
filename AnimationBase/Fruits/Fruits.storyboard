@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6OZ-7E-BvD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fruits-->
+        <scene sceneID="6iT-nB-gBg">
+            <objects>
+                <viewController id="6OZ-7E-BvD" customClass="FruitsViewController" customModule="AnimationBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XEI-Is-b6d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zhJ-Tb-JtQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qln-qZ-FTN">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="U6H-yR-0Ed" customClass="ImageCell" customModule="AnimationBase" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mI2-ly-XYY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="mI2-ly-XYY" secondAttribute="bottom" id="0wq-Nn-qal"/>
+                                            <constraint firstAttribute="trailing" secondItem="mI2-ly-XYY" secondAttribute="trailing" id="H3s-Yo-mtu"/>
+                                            <constraint firstItem="mI2-ly-XYY" firstAttribute="leading" secondItem="U6H-yR-0Ed" secondAttribute="leading" id="af5-dr-apf"/>
+                                            <constraint firstItem="mI2-ly-XYY" firstAttribute="top" secondItem="U6H-yR-0Ed" secondAttribute="top" id="dp3-v1-rsH"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="customImageView" destination="mI2-ly-XYY" id="6pv-IZ-7Wq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="6OZ-7E-BvD" id="JSM-Ib-fjo"/>
+                                    <outlet property="delegate" destination="6OZ-7E-BvD" id="no2-iZ-coV"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zhJ-Tb-JtQ" firstAttribute="top" secondItem="tIa-dh-jgf" secondAttribute="top" id="Ehb-di-rG3"/>
+                            <constraint firstItem="tIa-dh-jgf" firstAttribute="bottom" secondItem="zhJ-Tb-JtQ" secondAttribute="bottom" id="T50-VN-aTn"/>
+                            <constraint firstItem="tIa-dh-jgf" firstAttribute="trailing" secondItem="zhJ-Tb-JtQ" secondAttribute="trailing" id="d7V-qK-YDH"/>
+                            <constraint firstItem="zhJ-Tb-JtQ" firstAttribute="leading" secondItem="tIa-dh-jgf" secondAttribute="leading" id="r4T-FB-K5e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tIa-dh-jgf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fruits" id="swB-bu-XFh"/>
+                    <connections>
+                        <outlet property="fruitsCollectionView" destination="zhJ-Tb-JtQ" id="CAy-iU-m8x"/>
+                        <segue destination="ABY-fE-L6U" kind="show" identifier="showFruit" id="Gzj-bi-yNc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emP-kf-0J0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.80000000000000004" y="80.50974512743629"/>
+        </scene>
+        <!--Fruit-->
+        <scene sceneID="Rge-vQ-xFf">
+            <objects>
+                <viewController storyboardIdentifier="fruitVC" id="ABY-fE-L6U" customClass="FruitViewController" customModule="AnimationBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ozn-eg-b1W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XHK-i9-9v9">
+                                <rect key="frame" x="0.0" y="20" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XHK-i9-9v9" secondAttribute="height" multiplier="1:1" id="efN-Wt-Wrw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FV-SB-fQf">
+                                <rect key="frame" x="8" y="415" width="359" height="252"/>
+                                <string key="text">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pIj-VB-jPp" firstAttribute="trailing" secondItem="4FV-SB-fQf" secondAttribute="trailing" constant="8" id="23l-hz-sdl"/>
+                            <constraint firstItem="4FV-SB-fQf" firstAttribute="top" secondItem="XHK-i9-9v9" secondAttribute="bottom" constant="20" id="KHr-yV-4z1"/>
+                            <constraint firstAttribute="bottom" secondItem="4FV-SB-fQf" secondAttribute="bottom" id="TmF-aa-WAG"/>
+                            <constraint firstItem="pIj-VB-jPp" firstAttribute="trailing" secondItem="XHK-i9-9v9" secondAttribute="trailing" id="Z5E-9H-lY9"/>
+                            <constraint firstItem="XHK-i9-9v9" firstAttribute="leading" secondItem="pIj-VB-jPp" secondAttribute="leading" id="feA-Au-GOn"/>
+                            <constraint firstItem="XHK-i9-9v9" firstAttribute="top" secondItem="pIj-VB-jPp" secondAttribute="top" id="uLo-bs-aqY"/>
+                            <constraint firstItem="4FV-SB-fQf" firstAttribute="leading" secondItem="pIj-VB-jPp" secondAttribute="leading" constant="8" id="xMB-2a-oc8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pIj-VB-jPp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fruit" id="DME-NX-X6L"/>
+                    <connections>
+                        <outlet property="fruitImageView" destination="XHK-i9-9v9" id="ioo-bS-sQL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m2T-WX-q2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="81"/>
+        </scene>
+    </scenes>
+</document>
